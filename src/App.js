@@ -4,7 +4,11 @@ import Store from './store'
 import { observer } from 'mobx-react-lite'
 import { useContext } from "react"
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Switch, } from "react-router-dom";
+import {
+  HashRouter as BrowserRouter,
+  Route,
+} from 'react-router-dom';
 import './App.css';
 import PrivateRoute from './components/PrivateRoute'
 
