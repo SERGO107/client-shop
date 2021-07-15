@@ -36,7 +36,7 @@ function Login() {
 
     // console.log(Math.ceil(Math.log2(1000000)))
     const PostPassword = () => {
-        fetch('/login', {
+        fetch('https://relaxed-leakey-626a52.netlify.app/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json; charset=utf-8',
