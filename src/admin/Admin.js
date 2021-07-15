@@ -11,7 +11,7 @@ export const Admin = () => {
 
     const [dat, setData] = useState([])
     useEffect(() => {
-        fetch("https://shop107.herokuapp.com//db")
+        fetch("https://shop107.herokuapp.com/db")
             .then((response) => {
                 return response.json()
             }).then((data) => {
@@ -23,7 +23,7 @@ export const Admin = () => {
     function funn(id, item) {
         console.log(id)
         setData(dat.filter(it => it.id !== id))
-        fetch('https://shop107.herokuapp.com//delete', {
+        fetch('https://shop107.herokuapp.com/delete', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8',
