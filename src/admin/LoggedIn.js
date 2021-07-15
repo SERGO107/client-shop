@@ -36,7 +36,7 @@ function Login() {
 
     // console.log(Math.ceil(Math.log2(1000000)))
     const PostPassword = () => {
-        fetch('https://shop107.herokuapp.com/login', {
+        fetch('/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json; charset=utf-8',
