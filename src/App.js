@@ -18,12 +18,12 @@ function App() {
         <Switch>
           <Route exact path="/" component={ProductList} />
           <PrivateRoute
-            path="/login"
+            path="https://relaxed-leakey-626a52.netlify.app/login"
             component={Login}
             handler={OwnStore.Auth}
           />
           <PrivateRoute
-            path="/admin"           
+            path="https://relaxed-leakey-626a52.netlify.app/admin"
             handler={OwnStore.Auth}
           />
         </Switch>
