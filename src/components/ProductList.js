@@ -7,7 +7,7 @@ export const ProductList = () => {
 
     const [dat, setData] = useState([])
     useEffect(() => {
-        fetch("http://localhost:3001/db")
+        fetch("https://shop107.herokuapp.com//db")
             .then((response) => {
                 return response.json();
             }).then((data) => {
