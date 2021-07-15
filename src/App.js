@@ -6,7 +6,7 @@ import { useContext } from "react"
 
 import { Switch, } from "react-router-dom";
 import {
-  HashRouter as BrowserRouter,
+  HashRouter as Router,
   Route,
 } from 'react-router-dom';
 import './App.css';
@@ -17,7 +17,7 @@ function App() {
   const OwnStore = useContext(Store)
   console.log(OwnStore.Auth)
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <Switch>
           <Route exact path="/" component={ProductList} />
@@ -32,7 +32,7 @@ function App() {
           />
         </Switch>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
