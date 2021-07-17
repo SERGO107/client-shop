@@ -3,6 +3,7 @@ import { Input, Button, List, Image } from 'semantic-ui-react'
 import { observer } from 'mobx-react-lite'
 import { useContext, useState, useEffect } from 'react'
 import Store from '../store'
+import { UplodFiles } from './UplodFiles'
 
 
 export const Admin = () => {
@@ -54,19 +55,19 @@ export const Admin = () => {
     return (
         < div >
             <Input
-                fluid= {true}
+                fluid={true}
                 value={OwnStore.Name}
                 placeholder='Введите наименование'
                 onChange={(evt) => (OwnStore.Name = evt.target.value)}
             />
             <Input
-                fluid= {true}
+                fluid={true}
                 value={OwnStore.Description}
                 placeholder='Введите описание'
                 onChange={(evt) => (OwnStore.Description = evt.target.value)}
             />
             <Input
-                fluid= {true}
+                fluid={true}
                 label='Установите цену'
                 type="number"
                 value={OwnStore.Price}
@@ -74,7 +75,7 @@ export const Admin = () => {
                 onChange={(evt) => (OwnStore.Price = evt.target.value)}
             />
             <Input
-                fluid= {true}
+                fluid={true}
                 value={OwnStore.ImageUrl}
                 placeholder='Введите путь к изображению'
                 onChange={(evt) => (OwnStore.ImageUrl = evt.target.value)}
@@ -87,7 +88,7 @@ export const Admin = () => {
                 <Button onClick={pushProducts}> Добавить товары
                 </Button>
             </div>
-
+            <UplodFiles />
             <div>
                 {OwnStore.ProductCard.map(item => (
                     < List horizontal key={item.id} >
