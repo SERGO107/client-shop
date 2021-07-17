@@ -49,7 +49,7 @@ class Store {
     }
 
     async ProductsPost() {
-        await fetch(`https://shop107.herokuapp.com/db`, {
+        await fetch(`/db`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'

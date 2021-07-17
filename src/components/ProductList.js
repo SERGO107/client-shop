@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, Card, Image } from 'semantic-ui-react'
+import { List, Image } from 'semantic-ui-react'
 import { observer } from 'mobx-react-lite'
 import { useEffect, useState } from 'react'
 
@@ -7,7 +7,7 @@ export const ProductList = () => {
 
     const [dat, setData] = useState([])
     useEffect(() => {
-        fetch("https://shop107.herokuapp.com/db")
+        fetch("/db")
             .then((response) => {
                 return response.json();
             }).then((data) => {
@@ -18,9 +18,10 @@ export const ProductList = () => {
 
     return (
         <div className='wrap'>
+            <h1>Сегодня в продаже</h1>
             {dat.map(item => (
-                <List horizontal key={item.id}>
-                    <Image size='medium' big src={item.url} />
+                <List horizontal key={item.id} >
+                    <Image size='medium' rounded centered inline src={item.url} bordered />
                     <List.Item>
 
                         <List.Content>
@@ -39,17 +40,3 @@ export const ProductList = () => {
 }
 
 export default observer(ProductList)
-{/*  */ }
-
-{/* <List  horizontal key={item.id}>
-                    <Card  >
-                        <Image src={item.url} wrapped ui={false} />
-                        <Card.Content >
-                            <Card.Header><p>Наименование:{item.name}</p></Card.Header>
-                            <Card.Meta>Цена: {item.price}</Card.Meta>
-                            <Card.Description>
-                                Описание:{item.description}
-                            </Card.Description>
-                        </Card.Content>
-                    </Card>
-                </List>*/ }
